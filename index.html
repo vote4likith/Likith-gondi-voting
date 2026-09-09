@@ -3,233 +3,362 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#07111f">
-<title>Vote Likith Gondi ❤️ | Bigg Boss Kannada</title>
+<meta name="theme-color" content="#07090e">
+<title>Vote for Likith Gondi | Bigg Boss Kannada</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-
-body{
-  margin:0;
-  font-family:Inter,Arial,sans-serif;
-  color:#fff;
-  background:
-    radial-gradient(circle at 50% -10%,rgba(255,183,0,.22),transparent 34%),
-    linear-gradient(180deg,#07111f 0%,#0b1424 55%,#050a12 100%);
-  min-height:100vh;
+:root {
+  --gold-primary: #f3c368;
+  --gold-secondary: #cba143;
+  --gold-accent: #ffe8aa;
+  --bg-dark: #07080c;
+  --card-bg: rgba(18, 22, 33, 0.65);
+  --border-gold: linear-gradient(135deg, rgba(243, 195, 104, 0.6), rgba(203, 161, 67, 0.1), rgba(243, 195, 104, 0.4));
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
 }
 
-.wrap{
-  max-width:520px;
-  margin:auto;
-  padding:18px 16px 35px
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.top{
-  text-align:center;
-  padding:18px 8px 8px
+html {
+  scroll-behavior: smooth;
 }
 
-.badge{
-  display:inline-block;
-  padding:7px 13px;
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:999px;
-  background:rgba(255,255,255,.07);
-  font-size:12px;
-  letter-spacing:1.2px;
-  font-weight:800;
-  color:#ffd45c
+body {
+  font-family: var(--font-body);
+  color: #e4e7ec;
+  background-color: var(--bg-dark);
+  background-image: 
+    radial-gradient(circle at 50% -10%, rgba(203, 161, 67, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 50% 100%, rgba(243, 195, 104, 0.08) 0%, transparent 50%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
 }
 
-h1{
-  font-size:40px;
-  line-height:1.02;
-  margin:18px 0 8px;
-  font-weight:950;
-  letter-spacing:-1.5px
+.wrap {
+  width: 100%;
+  max-width: 480px;
+  padding: 24px 18px 40px;
+  position: relative;
+  z-index: 1;
 }
 
-h1 span{color:#ffd23f}
-
-.sub{
-  margin:0 auto;
-  color:#b9c4d4;
-  font-size:15px;
-  line-height:1.5;
-  max-width:390px
+/* Luxury Ambient Glows */
+.wrap::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+  background: rgba(243, 195, 104, 0.12);
+  filter: blur(80px);
+  border-radius: 50%;
+  z-index: -1;
 }
 
-.card{
-  margin-top:22px;
-  border-radius:28px;
-  padding:24px 20px;
-  background:linear-gradient(
-    145deg,
-    rgba(24,38,62,.96),
-    rgba(8,16,29,.96)
+/* Header Section */
+.top {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 50px;
+  background: rgba(243, 195, 104, 0.06);
+  border: 1px solid rgba(243, 195, 104, 0.3);
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.badge::before {
+  content: "★";
+  font-size: 10px;
+  color: var(--gold-primary);
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: 34px;
+  line-height: 1.15;
+  margin: 18px 0 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  background: linear-gradient(180deg, #ffffff 0%, #d8dce3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 span {
+  background: linear-gradient(135deg, #ffe8aa 0%, #f3c368 50%, #cba143 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+
+.sub {
+  color: #98a2b3;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+/* Main Luxury Card */
+.card {
+  position: relative;
+  border-radius: 28px;
+  padding: 28px 24px;
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(243, 195, 104, 0.22);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+/* Hero Portrait Frame */
+.hero {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-glow {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-primary), transparent, var(--gold-secondary));
+  opacity: 0.4;
+  filter: blur(12px);
+  animation: pulseGlow 4s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% { opacity: 0.3; transform: scale(0.98); }
+  100% { opacity: 0.6; transform: scale(1.04); }
+}
+
+.avatar-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #ffe8aa 0%, #cba143 50%, #584112 100%);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.name {
+  font-family: var(--font-heading);
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.role {
+  text-align: center;
+  color: var(--gold-primary);
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+/* Luxury Vote Button */
+.vote-btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 26px;
+  padding: 18px 24px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffe08a 0%, #d4a338 50%, #a2781e 100%);
+  color: #0d0f15;
+  box-shadow: 
+    0 10px 30px rgba(212, 163, 56, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+}
+
+.vote-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 15px 35px rgba(212, 163, 56, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.vote-btn .main-text {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.vote-btn .sub-text {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  margin-top: 3px;
+}
+
+/* Golden Shine Effect */
+.vote-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 70%
   );
-  border:1px solid rgba(255,255,255,.10);
-  box-shadow:0 20px 55px rgba(0,0,0,.35)
+  transform: rotate(30deg);
+  animation: shine 4s infinite;
 }
 
-.hero{
-  height:190px;
-  border-radius:22px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:
-    radial-gradient(
-      circle at 50% 42%,
-      rgba(255,211,64,.35),
-      transparent 32%
-    ),
-    linear-gradient(135deg,#142b4c,#08101c);
-  border:1px solid rgba(255,210,63,.22);
-  overflow:hidden;
-  position:relative
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(30deg); }
+  20%, 100% { transform: translateX(100%) rotate(30deg); }
 }
 
-.hero:after{
-  content:"♥";
-  position:absolute;
-  font-size:170px;
-  opacity:.055;
-  transform:rotate(-12deg)
+/* Steps Section */
+.steps {
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(243, 195, 104, 0.15);
 }
 
-.avatar{
-  width:110px;
-  height:110px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:linear-gradient(145deg,#ffd94a,#ff9d00);
-  color:#101827;
-  font-size:42px;
-  font-weight:950;
-  border:5px solid rgba(255,255,255,.85);
-  box-shadow:
-    0 0 0 8px rgba(255,210,63,.10),
-    0 12px 35px rgba(0,0,0,.4);
-  z-index:1
+.steps h2 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
-.name{
-  text-align:center;
-  font-size:25px;
-  font-weight:900;
-  margin:20px 0 3px
+.step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 12px 0;
 }
 
-.role{
-  text-align:center;
-  color:#aebbd0;
-  font-size:13px
+.num {
+  flex: 0 0 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(243, 195, 104, 0.1);
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-primary);
+  font-weight: 700;
+  font-size: 12px;
 }
 
-.vote{
-  display:block;
-  text-align:center;
-  text-decoration:none;
-  margin-top:22px;
-  padding:17px 20px;
-  border-radius:16px;
-  background:linear-gradient(90deg,#ffd83d,#ffad00);
-  color:#10151d;
-  font-size:18px;
-  font-weight:950;
-  box-shadow:0 10px 30px rgba(255,178,0,.25);
-  transition:.2s;
-  cursor:pointer
+.step b {
+  display: block;
+  font-size: 14px;
+  color: #f0f3f9;
+  margin-bottom: 2px;
 }
 
-.vote:hover{
-  transform:translateY(-2px)
+.step p {
+  color: #98a2b3;
+  font-size: 12px;
+  line-height: 1.4;
 }
 
-.vote small{
-  display:block;
-  font-size:11px;
-  margin-top:4px;
-  font-weight:800;
-  opacity:.72
+/* Action Buttons */
+.share-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  color: #d0d5dd;
+  border: 1px solid rgba(243, 195, 104, 0.25);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
-.steps{
-  margin-top:24px
+.share-btn:hover {
+  background: rgba(243, 195, 104, 0.08);
+  color: #fff;
+  border-color: var(--gold-primary);
 }
 
-.steps h2{
-  font-size:17px;
-  margin:0 0 13px
+.note {
+  text-align: center;
+  color: #667085;
+  font-size: 11px;
+  line-height: 1.5;
+  margin-top: 20px;
 }
 
-.step{
-  display:flex;
-  gap:12px;
-  align-items:flex-start;
-  padding:12px 0;
-  border-bottom:1px solid rgba(255,255,255,.07)
-}
-
-.step:last-child{
-  border:0
-}
-
-.num{
-  flex:0 0 30px;
-  height:30px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:#ffd33e;
-  color:#10151d;
-  font-weight:950;
-  font-size:13px
-}
-
-.step b{
-  display:block;
-  font-size:14px;
-  margin-bottom:3px
-}
-
-.step p{
-  margin:0;
-  color:#9eacc0;
-  font-size:12px;
-  line-height:1.4
-}
-
-.share{
-  width:100%;
-  margin-top:17px;
-  padding:14px;
-  border-radius:14px;
-  background:transparent;
-  color:#fff;
-  border:1px solid rgba(255,255,255,.18);
-  font-weight:850;
-  font-size:14px
-}
-
-.note{
-  text-align:center;
-  color:#77869c;
-  font-size:10px;
-  line-height:1.5;
-  margin:18px 10px 0
-}
-
-.footer{
-  text-align:center;
-  color:#5f6d81;
-  font-size:10px;
-  margin-top:22px
+.footer {
+  text-align: center;
+  color: #475467;
+  font-size: 11px;
+  margin-top: 24px;
+  letter-spacing: 0.5px;
 }
 </style>
 </head>
@@ -238,124 +367,94 @@ h1 span{color:#ffd23f}
 
 <main class="wrap">
 
-<header class="top">
+  <header class="top">
+    <div class="badge">Bigg Boss Kannada • Official Campaign</div>
+    <h1>VOTE FOR <span>LIKITH GONDI</span></h1>
+    <p class="sub">Your vote defines the journey. Support Likith with your official vote on JioHotstar.</p>
+  </header>
 
-<div class="badge">
-BIGG BOSS KANNADA • VOTING CAMPAIGN
-</div>
+  <section class="card">
 
-<h1>
-❤️ VOTE <span>LIKITH GONDI</span>
-</h1>
+    <div class="hero">
+      <div class="hero-glow"></div>
+      <div class="avatar-frame">
+        <img class="avatar-img" src="12369.jpg" alt="Likith Gondi">
+      </div>
+    </div>
 
-<p class="sub">
-Every vote matters. Support Likith and help him move forward in the Bigg Boss journey.
-</p>
+    <div class="name">Likith Gondi</div>
+    <div class="role">Contestant • Bigg Boss Kannada</div>
 
-</header>
+    <!-- Direct link to JioHotstar Bigg Boss Kannada page -->
+    <a 
+      class="vote-btn" 
+      href="https://www.hotstar.com/in/shows/bigg-boss/1971002073" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <span class="main-text">🗳️ VOTE NOW</span>
+      <span class="sub-text">Opens JioHotstar Voting Page</span>
+    </a>
 
-<section class="card">
+    <div class="steps">
+      <h2>How To Cast Your Vote</h2>
 
-<div class="hero">
-<div class="avatar">LG</div>
-</div>
+      <div class="step">
+        <div class="num">1</div>
+        <div>
+          <b>Tap "Vote Now" Above</b>
+          <p>You will be redirected directly to the official Bigg Boss show page on JioHotstar.</p>
+        </div>
+      </div>
 
-<div class="name">
-Likith Gondi
-</div>
+      <div class="step">
+        <div class="num">2</div>
+        <div>
+          <b>Locate the Voting Banner</b>
+          <p>Tap on the active <b>'Vote Now'</b> card on the JioHotstar platform.</p>
+        </div>
+      </div>
 
-<div class="role">
-Your Vote • Your Support • His Journey
-</div>
+      <div class="step">
+        <div class="num">3</div>
+        <div>
+          <b>Select Likith Gondi</b>
+          <p>Find Likith Gondi from the nominated contestants list and submit your votes.</p>
+        </div>
+      </div>
+    </div>
 
-<a
-class="vote"
-href="https://www.hotstar.com/in"
-target="_blank"
-rel="noopener"
->
-🗳️ VOTE ON JIOHOTSTAR
-<small>Tap to open JioHotstar</small>
-</a>
+    <button class="share-btn" onclick="sharePage()">
+      📲 SHARE CAMPAIGN WITH FRIENDS
+    </button>
 
-<div class="steps">
+    <p class="note">
+      Voting limits and availability are managed directly by JioHotstar. This is an unofficial fan campaign page.
+    </p>
 
-<h2>How to vote</h2>
+  </section>
 
-<div class="step">
-<div class="num">1</div>
-<div>
-<b>Open JioHotstar</b>
-<p>Tap the button above to open the official platform.</p>
-</div>
-</div>
-
-<div class="step">
-<div class="num">2</div>
-<div>
-<b>Open Bigg Boss Kannada</b>
-<p>Find the current Bigg Boss Kannada voting section.</p>
-</div>
-</div>
-
-<div class="step">
-<div class="num">3</div>
-<div>
-<b>Select Likith Gondi ❤️</b>
-<p>Choose Likith from the contestants shown in the official voting interface.</p>
-</div>
-</div>
-
-<div class="step">
-<div class="num">4</div>
-<div>
-<b>Submit your vote</b>
-<p>Complete the voting process shown by JioHotstar.</p>
-</div>
-</div>
-
-</div>
-
-<button class="share" onclick="sharePage()">
-📲 SHARE WITH FRIENDS
-</button>
-
-<p class="note">
-Voting availability, limits and timings are controlled by the official JioHotstar voting system.
-This page is a fan-made campaign page and is not an official JioHotstar page.
-</p>
-
-</section>
-
-<div class="footer">
-Made with ❤️ for Likith Gondi supporters
-</div>
+  <div class="footer">
+    Crafted with passion for Likith Gondi Supporters
+  </div>
 
 </main>
 
 <script>
-
 function sharePage(){
+  const data = {
+    title: "Vote for Likith Gondi | Bigg Boss Kannada",
+    text: "Support Likith Gondi in Bigg Boss Kannada! Cast your official vote on JioHotstar now.",
+    url: window.location.href
+  };
 
-const data={
-title:"Vote Likith Gondi ❤️",
-text:"Support Likith Gondi in Bigg Boss Kannada. Vote on JioHotstar! ❤️",
-url:location.href
-};
-
-if(navigator.share)
-navigator.share(data);
-
-else{
-
-navigator.clipboard?.writeText(location.href);
-
-alert("Page link copied. Share it with your friends!");
-
+  if (navigator.share) {
+    navigator.share(data).catch(() => {});
+  } else {
+    navigator.clipboard?.writeText(window.location.href);
+    alert("Campaign link copied to clipboard!");
+  }
 }
-
-}
-
 </script>
 
 </body>
