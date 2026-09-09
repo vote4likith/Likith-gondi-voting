@@ -1,72 +1,362 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Vote Likith Gondi ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07111f">
+<title>Vote Likith Gondi ❤️ | Bigg Boss Kannada</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;color:white;background:linear-gradient(160deg,#07111f,#111d32,#050912);min-height:100vh}
-.main{max-width:520px;margin:auto;padding:25px 18px}
-.top{text-align:center}
-.badge{display:inline-block;padding:8px 14px;border-radius:30px;background:#17253a;color:#ffd43b;font-size:12px;font-weight:bold}
-h1{font-size:40px;margin:22px 0 8px;font-weight:900}
-h1 span{color:#ffd43b}
-.sub{color:#b7c2d3;line-height:1.5}
-.card{margin-top:25px;padding:22px;border-radius:25px;background:#101c2e;border:1px solid #26354c;box-shadow:0 15px 40px #0008}
-.hero{height:180px;border-radius:20px;background:radial-gradient(circle,#ffd43b55,transparent 35%),#142944;display:flex;align-items:center;justify-content:center}
-.logo{width:110px;height:110px;border-radius:50%;background:#ffd43b;color:#111;display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:900;border:5px solid white}
-.name{text-align:center;font-size:26px;font-weight:900;margin-top:20px}
-.small{text-align:center;color:#9eacc0;margin-top:5px}
-.vote{display:block;text-decoration:none;text-align:center;background:#ffd43b;color:#111;padding:18px;border-radius:15px;margin-top:22px;font-size:18px;font-weight:900}
-.vote small{display:block;font-size:11px;margin-top:5px}
-h2{font-size:18px;margin-top:25px}
-.step{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #ffffff12}
-.num{min-width:30px;height:30px;border-radius:50%;background:#ffd43b;color:#111;display:flex;align-items:center;justify-content:center;font-weight:bold}
-.step b{font-size:14px}.step p{margin:4px 0;color:#9eacc0;font-size:12px;line-height:1.4}
-.note{text-align:center;color:#718096;font-size:10px;line-height:1.5;margin-top:20px}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:Inter,Arial,sans-serif;
+  color:#fff;
+  background:
+    radial-gradient(circle at 50% -10%,rgba(255,183,0,.22),transparent 34%),
+    linear-gradient(180deg,#07111f 0%,#0b1424 55%,#050a12 100%);
+  min-height:100vh;
+}
+
+.wrap{
+  max-width:520px;
+  margin:auto;
+  padding:18px 16px 35px
+}
+
+.top{
+  text-align:center;
+  padding:18px 8px 8px
+}
+
+.badge{
+  display:inline-block;
+  padding:7px 13px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;
+  background:rgba(255,255,255,.07);
+  font-size:12px;
+  letter-spacing:1.2px;
+  font-weight:800;
+  color:#ffd45c
+}
+
+h1{
+  font-size:40px;
+  line-height:1.02;
+  margin:18px 0 8px;
+  font-weight:950;
+  letter-spacing:-1.5px
+}
+
+h1 span{color:#ffd23f}
+
+.sub{
+  margin:0 auto;
+  color:#b9c4d4;
+  font-size:15px;
+  line-height:1.5;
+  max-width:390px
+}
+
+.card{
+  margin-top:22px;
+  border-radius:28px;
+  padding:24px 20px;
+  background:linear-gradient(
+    145deg,
+    rgba(24,38,62,.96),
+    rgba(8,16,29,.96)
+  );
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:0 20px 55px rgba(0,0,0,.35)
+}
+
+.hero{
+  height:190px;
+  border-radius:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(
+      circle at 50% 42%,
+      rgba(255,211,64,.35),
+      transparent 32%
+    ),
+    linear-gradient(135deg,#142b4c,#08101c);
+  border:1px solid rgba(255,210,63,.22);
+  overflow:hidden;
+  position:relative
+}
+
+.hero:after{
+  content:"♥";
+  position:absolute;
+  font-size:170px;
+  opacity:.055;
+  transform:rotate(-12deg)
+}
+
+.avatar{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(145deg,#ffd94a,#ff9d00);
+  color:#101827;
+  font-size:42px;
+  font-weight:950;
+  border:5px solid rgba(255,255,255,.85);
+  box-shadow:
+    0 0 0 8px rgba(255,210,63,.10),
+    0 12px 35px rgba(0,0,0,.4);
+  z-index:1
+}
+
+.name{
+  text-align:center;
+  font-size:25px;
+  font-weight:900;
+  margin:20px 0 3px
+}
+
+.role{
+  text-align:center;
+  color:#aebbd0;
+  font-size:13px
+}
+
+.vote{
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  margin-top:22px;
+  padding:17px 20px;
+  border-radius:16px;
+  background:linear-gradient(90deg,#ffd83d,#ffad00);
+  color:#10151d;
+  font-size:18px;
+  font-weight:950;
+  box-shadow:0 10px 30px rgba(255,178,0,.25);
+  transition:.2s;
+  cursor:pointer
+}
+
+.vote:hover{
+  transform:translateY(-2px)
+}
+
+.vote small{
+  display:block;
+  font-size:11px;
+  margin-top:4px;
+  font-weight:800;
+  opacity:.72
+}
+
+.steps{
+  margin-top:24px
+}
+
+.steps h2{
+  font-size:17px;
+  margin:0 0 13px
+}
+
+.step{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:12px 0;
+  border-bottom:1px solid rgba(255,255,255,.07)
+}
+
+.step:last-child{
+  border:0
+}
+
+.num{
+  flex:0 0 30px;
+  height:30px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#ffd33e;
+  color:#10151d;
+  font-weight:950;
+  font-size:13px
+}
+
+.step b{
+  display:block;
+  font-size:14px;
+  margin-bottom:3px
+}
+
+.step p{
+  margin:0;
+  color:#9eacc0;
+  font-size:12px;
+  line-height:1.4
+}
+
+.share{
+  width:100%;
+  margin-top:17px;
+  padding:14px;
+  border-radius:14px;
+  background:transparent;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.18);
+  font-weight:850;
+  font-size:14px
+}
+
+.note{
+  text-align:center;
+  color:#77869c;
+  font-size:10px;
+  line-height:1.5;
+  margin:18px 10px 0
+}
+
+.footer{
+  text-align:center;
+  color:#5f6d81;
+  font-size:10px;
+  margin-top:22px
+}
 </style>
 </head>
+
 <body>
-<div class="main">
-<div class="top">
-<div class="badge">BIGG BOSS KANNADA • VOTING CAMPAIGN</div>
-<h1>❤️ VOTE <span>LIKITH GONDI</span></h1>
-<p class="sub">Every vote matters. Support Likith and help him move forward in his Bigg Boss journey.</p>
+
+<main class="wrap">
+
+<header class="top">
+
+<div class="badge">
+BIGG BOSS KANNADA • VOTING CAMPAIGN
 </div>
 
-<div class="card">
-<div class="hero"><div class="logo">LG</div></div>
-<div class="name">Likith Gondi</div>
-<div class="small">Your Vote • Your Support • His Journey</div>
+<h1>
+❤️ VOTE <span>LIKITH GONDI</span>
+</h1>
 
-<a class="vote" href="https://www.hotstar.com/in" target="_blank">
- 🔥 VOTE FOR LIKITH NOW
-<small>OPEN JIOHOTSTAR → VOTE LIKITH ❤️</small>
+<p class="sub">
+Every vote matters. Support Likith and help him move forward in the Bigg Boss journey.
+</p>
+
+</header>
+
+<section class="card">
+
+<div class="hero">
+<div class="avatar">LG</div>
+</div>
+
+<div class="name">
+Likith Gondi
+</div>
+
+<div class="role">
+Your Vote • Your Support • His Journey
+</div>
+
+<a
+class="vote"
+href="https://www.hotstar.com/in"
+target="_blank"
+rel="noopener"
+>
+🗳️ VOTE ON JIOHOTSTAR
+<small>Tap to open JioHotstar</small>
+</a>
+
+<div class="steps">
 
 <h2>How to vote</h2>
 
 <div class="step">
 <div class="num">1</div>
-<div><b>Open JioHotstar</b><p>Tap the VOTE ON JIOHOTSTAR button above.</p></div>
+<div>
+<b>Open JioHotstar</b>
+<p>Tap the button above to open the official platform.</p>
+</div>
 </div>
 
 <div class="step">
 <div class="num">2</div>
-<div><b>Open Bigg Boss Kannada</b><p>Go to the current Bigg Boss Kannada voting section.</p></div>
+<div>
+<b>Open Bigg Boss Kannada</b>
+<p>Find the current Bigg Boss Kannada voting section.</p>
+</div>
 </div>
 
 <div class="step">
 <div class="num">3</div>
-<div><b>Select Likith Gondi ❤️</b><p>Choose Likith from the contestants displayed.</p></div>
+<div>
+<b>Select Likith Gondi ❤️</b>
+<p>Choose Likith from the contestants shown in the official voting interface.</p>
+</div>
 </div>
 
 <div class="step">
 <div class="num">4</div>
-<div><b>Submit your vote</b><p>Complete the official voting process shown by JioHotstar.</p></div>
+<div>
+<b>Submit your vote</b>
+<p>Complete the voting process shown by JioHotstar.</p>
+</div>
 </div>
 
-<p class="note">Voting availability, limits and timings are controlled by JioHotstar. This is a fan-made campaign page and is not an official JioHotstar website.</p>
 </div>
+
+<button class="share" onclick="sharePage()">
+📲 SHARE WITH FRIENDS
+</button>
+
+<p class="note">
+Voting availability, limits and timings are controlled by the official JioHotstar voting system.
+This page is a fan-made campaign page and is not an official JioHotstar page.
+</p>
+
+</section>
+
+<div class="footer">
+Made with ❤️ for Likith Gondi supporters
 </div>
+
+</main>
+
+<script>
+
+function sharePage(){
+
+const data={
+title:"Vote Likith Gondi ❤️",
+text:"Support Likith Gondi in Bigg Boss Kannada. Vote on JioHotstar! ❤️",
+url:location.href
+};
+
+if(navigator.share)
+navigator.share(data);
+
+else{
+
+navigator.clipboard?.writeText(location.href);
+
+alert("Page link copied. Share it with your friends!");
+
+}
+
+}
+
+</script>
+
 </body>
 </html>
